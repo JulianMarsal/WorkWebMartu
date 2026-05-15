@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title data-i18n="meta.title">Martina Parola - Efectos Especiales & Maquillaje Artístico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="main-menu">
+    <div class="menu-container">
+      <a href="#home" class="menu-logo" data-nav="home">Martina<span>Parola</span></a>
+
+      <div class="menu-items">
+        <a href="#cursos"   data-nav="cursos"   data-i18n="nav.cursos">Cursos</a>
+        <a href="#social"   data-nav="social"   data-i18n="nav.social">Social</a>
+        <a href="#teatral"  data-nav="teatral"  data-i18n="nav.teatral">Teatral</a>
+        <a href="#fx"       data-nav="fx"       data-i18n="nav.fx">FX</a>
+        <a href="#contacto" data-nav="contacto" data-i18n="nav.contacto">Contacto</a>
+      </div>
+
+      <div class="nav-right">
+        <button type="button" class="lang-switch" data-lang="es" aria-label="Idioma / Language">
+          <span class="lang-switch-track">
+            <span class="lang-switch-label">ES</span>
+            <span class="lang-switch-label">EN</span>
+            <span class="lang-switch-thumb" aria-hidden="true"></span>
+          </span>
+        </button>
+        <button class="mobile-menu-toggle" aria-label="Menú">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- PAGE: HOME -->
+    <section id="page-home" class="page active">
+      <header class="hero">
+        <div class="hero-content">
+          <h1>Martina Parola</h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">Maquillaje Artístico & Efectos Especiales</p>
+        </div>
+      </header>
+
+      <div class="home-about">
+        <div class="container">
+          <div class="home-about-content">
+            <div class="home-about-image">
+              <!-- PLACEHOLDER: reemplazar con foto de Martina -->
+              <img src="https://cdn.gamma.app/s6k4wiq7sjmzdft/6b6e7ef1b5e04e3c8bd31f63339124c5/original/Captura-de-pantalla-2025-01-16-135827.png" alt="Martina Parola">
+            </div>
+            <div class="home-about-text">
+              <h2 data-i18n="home.aboutTitle">Sobre Mí</h2>
+              <p data-i18n="home.aboutP1">Licenciada y profesora en Artes Plásticas por la Universidad Nacional de La Plata, con formación en acrobacia aérea, maquillaje artístico y efectos especiales. Mi trabajo se mueve entre la creación artística, la docencia y la producción audiovisual.</p>
+              <p data-i18n="home.aboutP2">Desde maquillaje social y teatral hasta efectos especiales con prótesis y simulacros, cada proyecto es una oportunidad para transformar y contar una historia a través de la piel.</p>
+              <div class="home-contact-strip">
+                <a href="tel:+542364312834" class="home-contact-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  +54 236 431 2834
+                </a>
+                <a href="mailto:martu.parola@gmail.com" class="home-contact-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                  martu.parola@gmail.com
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-categories">
+        <div class="container">
+          <h2 data-i18n="home.portfolio">Portfolio</h2>
+          <div class="category-grid">
+            <a href="#social" class="category-card category-social" data-nav="social">
+              <div class="category-card-inner">
+                <h3 data-i18n="cat.social.title">Social</h3>
+                <p data-i18n="cat.social.desc">Maquillaje social y eventos</p>
+              </div>
+            </a>
+            <a href="#teatral" class="category-card category-teatral" data-nav="teatral">
+              <div class="category-card-inner">
+                <h3 data-i18n="cat.teatral.title">Teatral</h3>
+                <p data-i18n="cat.teatral.desc">Circo, teatro y escena</p>
+              </div>
+            </a>
+            <a href="#fx" class="category-card category-fx" data-nav="fx">
+              <div class="category-card-inner">
+                <h3 data-i18n="cat.fx.title">FX</h3>
+                <p data-i18n="cat.fx.desc">Efectos especiales y prótesis</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-videos">
+        <div class="container">
+          <h2 data-i18n="home.videos">Videos</h2>
+          <div class="video-grid">
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/0QTEAFoMO2k?si=v9x-pnEBhXsLz_gT" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              <div class="video-info"><h3>Stop motion cicatriz</h3></div>
+            </div>
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/qNUWiEVVUkA?si=Na2sTM3R2vg2KGsr" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              <div class="video-info"><h3>Arder</h3></div>
+            </div>
+            <div class="video-item">
+              <iframe src="https://www.youtube.com/embed/t0noBVTbFLk?si=Hui4emOYfoM0AJVN" frameborder="0" allowfullscreen loading="lazy"></iframe>
+              <div class="video-info"><h3>Vaciada</h3></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE: CURSOS -->
+    <section id="page-cursos" class="page">
+      <div class="page-header">
+        <div class="container">
+          <h1 data-i18n="cursos.title">Cursos</h1>
+          <p class="page-header-sub" data-i18n="cursos.sub">Formación y talleres</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="cursos-grid">
+          <div class="curso-card">
+            <div class="curso-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            </div>
+            <h3 data-i18n="curso.auto.title">Automaquillaje</h3>
+            <p data-i18n="curso.auto.desc">Aprendé técnicas de maquillaje social para aplicar vos misma. Ideal para eventos, salidas y el día a día.</p>
+            <a href="#contacto" data-nav="contacto" class="curso-cta" data-i18n="curso.cta">Consultar</a>
+          </div>
+          <div class="curso-card">
+            <div class="curso-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z"></path><path d="m14 7 3 3"></path></svg>
+            </div>
+            <h3 data-i18n="curso.art.title">Maquillaje Artístico</h3>
+            <p data-i18n="curso.art.desc">Taller de maquillaje artístico y efectos. Técnicas de caracterización, prótesis y diseño de personajes.</p>
+            <a href="#contacto" data-nav="contacto" class="curso-cta" data-i18n="curso.cta">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAGE: SOCIAL -->
+    <section id="page-social" class="page page-social">
+      <div class="page-header">
+        <div class="container">
+          <h1 data-i18n="page.social.title">Social</h1>
+          <p class="page-header-sub" data-i18n="page.social.sub">Maquillaje social y eventos</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="portfolio-grid" id="grid-social"></div>
+      </div>
+    </section>
+
+    <!-- PAGE: TEATRAL -->
+    <section id="page-teatral" class="page page-teatral">
+      <div class="page-header">
+        <div class="container">
+          <h1 data-i18n="page.teatral.title">Teatral</h1>
+          <p class="page-header-sub" data-i18n="page.teatral.sub">Circo, teatro y escena</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="portfolio-grid" id="grid-teatral"></div>
+      </div>
+    </section>
+
+    <!-- PAGE: FX -->
+    <section id="page-fx" class="page page-fx">
+      <div class="page-header">
+        <div class="container">
+          <h1 data-i18n="page.fx.title">FX</h1>
+          <p class="page-header-sub" data-i18n="page.fx.sub">Efectos especiales y prótesis</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="portfolio-grid" id="grid-fx"></div>
+      </div>
+    </section>
+
+    <!-- PAGE: CONTACTO -->
+    <section id="page-contacto" class="page">
+      <div class="page-header">
+        <div class="container">
+          <h1 data-i18n="page.contacto.title">Contacto & CV</h1>
+        </div>
+      </div>
+      <div class="container">
+        <div class="contacto-layout">
+          <div class="contacto-info-card">
+            <h2 data-i18n="contacto.title">Contactame</h2>
+            <div class="contact-details">
+              <a href="tel:+542364312834" class="contact-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                +54 236 431 2834
+              </a>
+              <a href="mailto:martu.parola@gmail.com" class="contact-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                martu.parola@gmail.com
+              </a>
+              <a href="https://www.linkedin.com/in/martina-parola-8889022a8/" target="_blank" rel="noopener" class="contact-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                LinkedIn
+              </a>
+            </div>
+            <div class="cv-download">
+              <a href="#" id="cv-download-btn" class="download-button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span data-i18n="contacto.download">Descargar CV</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="cv-content">
+            <div class="cv-block">
+              <h3 data-i18n="cv.exp">Experiencia</h3>
+              <div class="cv-item">
+                <h4 data-i18n="cv.exp.docente.title">Docente de Acrobacia Aérea en Telas</h4>
+                <p class="cv-meta" data-i18n="cv.exp.docente.meta">Centro Cultural "El Clú", Berisso • 2023 – Presente</p>
+              </div>
+              <div class="cv-item">
+                <h4 data-i18n="cv.exp.audiovisual.title">Creadora de Contenido Audiovisual</h4>
+                <p class="cv-meta" data-i18n="cv.exp.audiovisual.meta">V-Tech Gaming, Buenos Aires • Feb 2022 – Feb 2023</p>
+              </div>
+              <div class="cv-item">
+                <h4 data-i18n="cv.exp.fam.title">Artista Visual — Evento "Fam Up"</h4>
+                <p class="cv-meta" data-i18n="cv.exp.fam.meta">Laguna de Gómez, Junín • 2019</p>
+              </div>
+            </div>
+            <div class="cv-block">
+              <h3 data-i18n="cv.edu">Educación</h3>
+              <div class="cv-item">
+                <h4 data-i18n="cv.edu.lic.title">Licenciatura en Artes Plásticas (Pintura)</h4>
+                <p class="cv-meta" data-i18n="cv.edu.lic.meta">UNLP — Facultad de Artes • 2018 – 2023</p>
+              </div>
+              <div class="cv-item">
+                <h4 data-i18n="cv.edu.prof.title">Profesorado en Artes Plásticas (Pintura)</h4>
+                <p class="cv-meta" data-i18n="cv.edu.prof.meta">UNLP — Facultad de Artes • 2018 – 2024</p>
+              </div>
+              <div class="cv-item">
+                <h4 data-i18n="cv.edu.tela.title">Profesorado de Acrobacia en Telas</h4>
+                <p class="cv-meta" data-i18n="cv.edu.tela.meta">Alto Vuelo, Junín • 2015 – 2017</p>
+              </div>
+            </div>
+            <div class="cv-block">
+              <h3 data-i18n="cv.skills">Habilidades</h3>
+              <div class="cv-skills">
+                <span class="skill-tag" data-i18n="skill.maquillaje">Maquillaje artístico</span>
+                <span class="skill-tag" data-i18n="skill.fx">Efectos especiales</span>
+                <span class="skill-tag" data-i18n="skill.protesis">Prótesis</span>
+                <span class="skill-tag" data-i18n="skill.pintura">Pintura</span>
+                <span class="skill-tag" data-i18n="skill.acrobacia">Acrobacia aérea</span>
+                <span class="skill-tag" data-i18n="skill.audiovisual">Producción audiovisual</span>
+                <span class="skill-tag" data-i18n="skill.ingles">Inglés avanzado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+      <div class="modal-carousel">
+        <button class="carousel-button prev" id="carousel-prev">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg>
+        </button>
+        <div class="carousel-container" id="carousel-container"></div>
+        <button class="carousel-button next" id="carousel-next">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+        </button>
+      </div>
+      <div class="modal-info">
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Martina Parola</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
