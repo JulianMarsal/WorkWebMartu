@@ -1,45 +1,245 @@
 // ════════════════════════════════════════
+// TRANSLATIONS
+// ════════════════════════════════════════
+const translations = {
+  es: {
+    'meta.title': 'Martina Parola - Efectos Especiales & Maquillaje Artístico',
+
+    'nav.cursos':   'Cursos',
+    'nav.social':   'Social',
+    'nav.teatral':  'Teatral',
+    'nav.fx':       'FX',
+    'nav.contacto': 'Contacto',
+
+    'hero.subtitle':    'Maquillaje Artístico & Efectos Especiales',
+    'home.aboutTitle':  'Sobre Mí',
+    'home.aboutP1':     'Licenciada y profesora en Artes Plásticas por la Universidad Nacional de La Plata, con formación en acrobacia aérea, maquillaje artístico y efectos especiales. Mi trabajo se mueve entre la creación artística, la docencia y la producción audiovisual.',
+    'home.aboutP2':     'Desde maquillaje social y teatral hasta efectos especiales con prótesis y simulacros, cada proyecto es una oportunidad para transformar y contar una historia a través de la piel.',
+    'home.portfolio':   'Portfolio',
+    'home.videos':      'Videos',
+
+    'cat.social.title':   'Social',
+    'cat.social.desc':    'Maquillaje social y eventos',
+    'cat.teatral.title':  'Teatral',
+    'cat.teatral.desc':   'Circo, teatro y escena',
+    'cat.fx.title':       'FX',
+    'cat.fx.desc':        'Efectos especiales y prótesis',
+
+    'cursos.title':     'Cursos',
+    'cursos.sub':       'Formación y talleres',
+    'curso.auto.title': 'Automaquillaje',
+    'curso.auto.desc':  'Aprendé técnicas de maquillaje social para aplicar vos misma. Ideal para eventos, salidas y el día a día.',
+    'curso.art.title':  'Maquillaje Artístico',
+    'curso.art.desc':   'Taller de maquillaje artístico y efectos. Técnicas de caracterización, prótesis y diseño de personajes.',
+    'curso.cta':        'Consultar',
+
+    'page.social.title':   'Social',
+    'page.social.sub':     'Maquillaje social y eventos',
+    'page.teatral.title':  'Teatral',
+    'page.teatral.sub':    'Circo, teatro y escena',
+    'page.fx.title':       'FX',
+    'page.fx.sub':         'Efectos especiales y prótesis',
+    'page.contacto.title': 'Contacto & CV',
+
+    'contacto.title':    'Contactame',
+    'contacto.download': 'Descargar CV',
+    'contacto.cvSoon':   'El CV estará disponible próximamente.',
+
+    'cv.exp':    'Experiencia',
+    'cv.edu':    'Educación',
+    'cv.skills': 'Habilidades',
+
+    'cv.exp.docente.title':      'Docente de Acrobacia Aérea en Telas',
+    'cv.exp.docente.meta':       'Centro Cultural "El Clú", Berisso • 2023 – Presente',
+    'cv.exp.audiovisual.title':  'Creadora de Contenido Audiovisual',
+    'cv.exp.audiovisual.meta':   'V-Tech Gaming, Buenos Aires • Feb 2022 – Feb 2023',
+    'cv.exp.fam.title':          'Artista Visual — Evento "Fam Up"',
+    'cv.exp.fam.meta':           'Laguna de Gómez, Junín • 2019',
+
+    'cv.edu.lic.title':  'Licenciatura en Artes Plásticas (Pintura)',
+    'cv.edu.lic.meta':   'UNLP — Facultad de Artes • 2018 – 2023',
+    'cv.edu.prof.title': 'Profesorado en Artes Plásticas (Pintura)',
+    'cv.edu.prof.meta':  'UNLP — Facultad de Artes • 2018 – 2024',
+    'cv.edu.tela.title': 'Profesorado de Acrobacia en Telas',
+    'cv.edu.tela.meta':  'Alto Vuelo, Junín • 2015 – 2017',
+
+    'skill.maquillaje':  'Maquillaje artístico',
+    'skill.fx':          'Efectos especiales',
+    'skill.protesis':    'Prótesis',
+    'skill.pintura':     'Pintura',
+    'skill.acrobacia':   'Acrobacia aérea',
+    'skill.audiovisual': 'Producción audiovisual',
+    'skill.ingles':      'Inglés avanzado',
+  },
+
+  en: {
+    'meta.title': 'Martina Parola - Special Effects & Artistic Makeup',
+
+    'nav.cursos':   'Courses',
+    'nav.social':   'Social',
+    'nav.teatral':  'Theater',
+    'nav.fx':       'FX',
+    'nav.contacto': 'Contact',
+
+    'hero.subtitle':    'Artistic Makeup & Special Effects',
+    'home.aboutTitle':  'About Me',
+    'home.aboutP1':     'Bachelor and licensed teacher of Visual Arts from the National University of La Plata, with training in aerial acrobatics, artistic makeup, and special effects. My work moves between artistic creation, teaching, and audiovisual production.',
+    'home.aboutP2':     'From social and theatrical makeup to special effects with prosthetics and simulations, every project is an opportunity to transform and tell a story through the skin.',
+    'home.portfolio':   'Portfolio',
+    'home.videos':      'Videos',
+
+    'cat.social.title':   'Social',
+    'cat.social.desc':    'Social makeup and events',
+    'cat.teatral.title':  'Theater',
+    'cat.teatral.desc':   'Circus, theater and stage',
+    'cat.fx.title':       'FX',
+    'cat.fx.desc':        'Special effects and prosthetics',
+
+    'cursos.title':     'Courses',
+    'cursos.sub':       'Training and workshops',
+    'curso.auto.title': 'Self-Makeup',
+    'curso.auto.desc':  'Learn social makeup techniques to apply on yourself. Perfect for events, nights out, and everyday looks.',
+    'curso.art.title':  'Artistic Makeup',
+    'curso.art.desc':   'Artistic makeup and effects workshop. Character design, prosthetics, and characterization techniques.',
+    'curso.cta':        'Inquire',
+
+    'page.social.title':   'Social',
+    'page.social.sub':     'Social makeup and events',
+    'page.teatral.title':  'Theater',
+    'page.teatral.sub':    'Circus, theater and stage',
+    'page.fx.title':       'FX',
+    'page.fx.sub':         'Special effects and prosthetics',
+    'page.contacto.title': 'Contact & CV',
+
+    'contacto.title':    'Get in touch',
+    'contacto.download': 'Download CV',
+    'contacto.cvSoon':   'The CV will be available soon.',
+
+    'cv.exp':    'Experience',
+    'cv.edu':    'Education',
+    'cv.skills': 'Skills',
+
+    'cv.exp.docente.title':      'Aerial Silks Acrobatics Teacher',
+    'cv.exp.docente.meta':       '"El Clú" Cultural Center, Berisso • 2023 – Present',
+    'cv.exp.audiovisual.title':  'Audiovisual Content Creator',
+    'cv.exp.audiovisual.meta':   'V-Tech Gaming, Buenos Aires • Feb 2022 – Feb 2023',
+    'cv.exp.fam.title':          'Visual Artist — "Fam Up" Event',
+    'cv.exp.fam.meta':           'Laguna de Gómez, Junín • 2019',
+
+    'cv.edu.lic.title':  'Bachelor\'s Degree in Visual Arts (Painting)',
+    'cv.edu.lic.meta':   'UNLP — School of Arts • 2018 – 2023',
+    'cv.edu.prof.title': 'Teaching Degree in Visual Arts (Painting)',
+    'cv.edu.prof.meta':  'UNLP — School of Arts • 2018 – 2024',
+    'cv.edu.tela.title': 'Teaching Degree in Aerial Silks',
+    'cv.edu.tela.meta':  'Alto Vuelo, Junín • 2015 – 2017',
+
+    'skill.maquillaje':  'Artistic makeup',
+    'skill.fx':          'Special effects',
+    'skill.protesis':    'Prosthetics',
+    'skill.pintura':     'Painting',
+    'skill.acrobacia':   'Aerial acrobatics',
+    'skill.audiovisual': 'Audiovisual production',
+    'skill.ingles':      'Advanced English',
+  }
+};
+
+// ════════════════════════════════════════
+// LANGUAGE STATE
+// ════════════════════════════════════════
+const STORAGE_KEY = 'mp-lang';
+
+function detectInitialLanguage() {
+  // 1. Honor saved preference if present
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved && translations[saved]) return saved;
+
+  // 2. Detect from browser locale (covers en-US, en-GB, en-AU, etc.)
+  const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  if (browserLang.startsWith('en')) return 'en';
+
+  // 3. Default: Spanish
+  return 'es';
+}
+
+let currentLang = detectInitialLanguage();
+
+function t(key) {
+  return translations[currentLang][key] || translations.es[key] || key;
+}
+
+function setLanguage(lang) {
+  if (!translations[lang]) return;
+  currentLang = lang;
+  localStorage.setItem(STORAGE_KEY, lang);
+
+  // Update <html lang>
+  document.documentElement.lang = lang;
+
+  // Update document title
+  document.title = t('meta.title');
+
+  // Update all elements with data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    el.textContent = t(key);
+  });
+
+  // Update language switch state (drives the sliding thumb via CSS)
+  const langSwitch = document.querySelector('.lang-switch');
+  if (langSwitch) langSwitch.setAttribute('data-lang', lang);
+
+  // Re-render portfolio grids so item titles/subtitles update
+  renderPortfolios();
+}
+
+// Single switch — click anywhere on it toggles between languages
+const langSwitch = document.querySelector('.lang-switch');
+if (langSwitch) {
+  langSwitch.addEventListener('click', () => {
+    setLanguage(currentLang === 'es' ? 'en' : 'es');
+  });
+}
+
+// CV download handler (uses translated alert)
+document.getElementById('cv-download-btn').addEventListener('click', (e) => {
+  e.preventDefault();
+  alert(t('contacto.cvSoon'));
+});
+
+
+// ════════════════════════════════════════
 // ROUTING
 // ════════════════════════════════════════
 const pages = document.querySelectorAll('.page');
-const navLinks = document.querySelectorAll('[data-nav]');
 const menuItems = document.querySelector('.menu-items');
 const mobileToggle = document.querySelector('.mobile-menu-toggle');
 
 function navigateTo(pageId) {
-  // Hide all pages
   pages.forEach(p => p.classList.remove('active'));
-  // Show target
   const target = document.getElementById('page-' + pageId);
   if (target) {
     target.classList.add('active');
   } else {
     document.getElementById('page-home').classList.add('active');
   }
-  // Update nav active state
   document.querySelectorAll('.menu-items a').forEach(a => a.classList.remove('active'));
   const activeLink = document.querySelector(`.menu-items a[data-nav="${pageId}"]`);
   if (activeLink) activeLink.classList.add('active');
-  // Scroll to top
   window.scrollTo(0, 0);
-  // Close mobile menu
   menuItems.classList.remove('open');
 }
 
-// Listen for hash changes
 window.addEventListener('hashchange', () => {
   const hash = location.hash.slice(1) || 'home';
   navigateTo(hash);
 });
 
-// Initial load
 window.addEventListener('DOMContentLoaded', () => {
   const hash = location.hash.slice(1) || 'home';
   navigateTo(hash);
-  renderPortfolios();
+  setLanguage(currentLang); // applies translations + initial render
 });
 
-// Nav click handling (for data-nav links everywhere, not just menu)
 document.addEventListener('click', (e) => {
   const navEl = e.target.closest('[data-nav]');
   if (navEl) {
@@ -49,105 +249,77 @@ document.addEventListener('click', (e) => {
   }
 });
 
-// Mobile menu toggle
 mobileToggle.addEventListener('click', () => {
   menuItems.classList.toggle('open');
 });
 
 
 // ════════════════════════════════════════
-// PORTFOLIO DATA
+// PORTFOLIO DATA (bilingual)
 // ════════════════════════════════════════
 
 // ── SOCIAL (rosa viejo / tierras) ──
 const socialItems = [
   {
-    title: "Opacados — Lucía",
-    images: [
-      "placeholder-social-lucia-1.jpg",
-    ],
-    description: "Maquillaje social para Lucía."
+    title: { es: 'Opacados — Lucía', en: 'Opacados — Lucía' },
+    images: ['placeholder-social-lucia-1.jpg'],
+    description: { es: 'Maquillaje social para Lucía.', en: 'Social makeup for Lucía.' }
   },
   {
-    title: "Opacados — Dante",
-    images: [
-      "placeholder-social-dante-1.jpg",
-    ],
-    description: "Maquillaje social para Dante."
+    title: { es: 'Opacados — Dante', en: 'Opacados — Dante' },
+    images: ['placeholder-social-dante-1.jpg'],
+    description: { es: 'Maquillaje social para Dante.', en: 'Social makeup for Dante.' }
   },
   {
-    title: "Mastermind — Mariposa y Rojo",
-    images: [
-      "placeholder-social-mastermind-1.jpg",
-    ],
-    description: "Maquillaje social — Mastermind."
+    title: { es: 'Mastermind — Mariposa y Rojo', en: 'Mastermind — Butterfly and Red' },
+    images: ['placeholder-social-mastermind-1.jpg'],
+    description: { es: 'Maquillaje social — Mastermind.', en: 'Social makeup — Mastermind.' }
   },
 ];
 
 // ── TEATRAL (turquesa pastel / tierra) ──
 const teatralItems = [
   {
-    title: "Maquillaje para Circo",
-    subtitle: "Alumnas",
-    images: [
-      // REEMPLAZAR: pegar URLs de las fotos del Drive
-      "placeholder-teatral-circo-alumnas-1.jpg",
-    ],
-    description: "Maquillaje para alumnas de circo."
+    title: { es: 'Maquillaje para Circo', en: 'Circus Makeup' },
+    subtitle: { es: 'Alumnas', en: 'Students' },
+    images: ['placeholder-teatral-circo-alumnas-1.jpg'],
+    description: { es: 'Maquillaje para alumnas de circo.', en: 'Makeup for circus students.' }
   },
   {
-    title: "Maquillaje para Circo",
-    subtitle: "Marina y amigas",
-    images: [
-      // REEMPLAZAR: pegar URLs de las fotos del Drive
-      "placeholder-teatral-circo-marina-1.jpg",
-    ],
-    description: "Maquillaje para circo — Marina y amigas, 2022."
+    title: { es: 'Maquillaje para Circo', en: 'Circus Makeup' },
+    subtitle: { es: 'Marina y amigas', en: 'Marina and friends' },
+    images: ['placeholder-teatral-circo-marina-1.jpg'],
+    description: { es: 'Maquillaje para circo — Marina y amigas, 2022.', en: 'Circus makeup — Marina and friends, 2022.' }
   },
   {
-    title: "Vejez / Arlequín",
-    subtitle: "Escuela de teatro",
-    images: [
-      // REEMPLAZAR: pegar URLs de las fotos del Drive
-      "placeholder-teatral-vejez-1.jpg",
-    ],
-    description: "Caracterización de vejez y arlequín para escuela de teatro."
+    title: { es: 'Vejez / Arlequín', en: 'Old Age / Harlequin' },
+    subtitle: { es: 'Escuela de teatro', en: 'Theater school' },
+    images: ['placeholder-teatral-vejez-1.jpg'],
+    description: { es: 'Caracterización de vejez y arlequín para escuela de teatro.', en: 'Old-age and harlequin characterization for a theater school.' }
   },
 ];
 
 // ── FX (rojo / negro) ──
 const fxItems = [
   {
-    title: "Prótesis",
-    images: [
-      // REEMPLAZAR: pegar URLs de las fotos del Drive
-      "placeholder-fx-protesis-1.jpg",
-    ],
-    description: "Aplicación y diseño de prótesis de silicona."
+    title: { es: 'Prótesis', en: 'Prosthetics' },
+    images: ['placeholder-fx-protesis-1.jpg'],
+    description: { es: 'Aplicación y diseño de prótesis de silicona.', en: 'Silicone prosthetic design and application.' }
   },
   {
-    title: "Mastermind",
-    images: [
-      // REEMPLAZAR: pegar URLs de las fotos del Drive
-      "placeholder-fx-mastermind-1.jpg",
-    ],
-    description: "Efectos especiales — Mastermind."
+    title: { es: 'Mastermind', en: 'Mastermind' },
+    images: ['placeholder-fx-mastermind-1.jpg'],
+    description: { es: 'Efectos especiales — Mastermind.', en: 'Special effects — Mastermind.' }
   },
   {
-    title: "Opacados",
-    images: [
-      // REEMPLAZAR: pegar URLs de las fotos del Drive
-      "placeholder-fx-opacados-1.jpg",
-    ],
-    description: "Efectos especiales para Opacados."
+    title: { es: 'Opacados', en: 'Opacados' },
+    images: ['placeholder-fx-opacados-1.jpg'],
+    description: { es: 'Efectos especiales para Opacados.', en: 'Special effects for Opacados.' }
   },
   {
-    title: "Simulacro",
-    images: [
-      // REEMPLAZAR: pegar URLs de las fotos del Drive
-      "placeholder-fx-simulacro-1.jpg",
-    ],
-    description: "Maquillaje de efectos para simulacro."
+    title: { es: 'Simulacro', en: 'Simulation' },
+    images: ['placeholder-fx-simulacro-1.jpg'],
+    description: { es: 'Maquillaje de efectos para simulacro.', en: 'Effects makeup for a simulation.' }
   },
 ];
 
@@ -156,35 +328,39 @@ const fxItems = [
 // RENDER PORTFOLIO GRIDS
 // ════════════════════════════════════════
 function renderPortfolios() {
-  renderGrid('grid-social', socialItems);
+  renderGrid('grid-social',  socialItems);
   renderGrid('grid-teatral', teatralItems);
-  renderGrid('grid-fx', fxItems);
+  renderGrid('grid-fx',      fxItems);
 }
 
 function renderGrid(containerId, items) {
   const container = document.getElementById(containerId);
   if (!container) return;
+  container.innerHTML = '';
 
   items.forEach(item => {
     const el = document.createElement('div');
     el.className = 'portfolio-item';
 
     const isPlaceholder = item.images[0].startsWith('placeholder');
+    const title    = item.title[currentLang]    || item.title.es;
+    const subtitle = item.subtitle ? (item.subtitle[currentLang] || item.subtitle.es) : '';
 
     el.innerHTML = `
       ${isPlaceholder
-        ? `<div class="placeholder-img"><span>${item.title}</span></div>`
-        : `<img src="${item.images[0]}" alt="${item.title}" loading="lazy">`
+        ? `<div class="placeholder-img"><span>${title}</span></div>`
+        : `<img src="${item.images[0]}" alt="${title}" loading="lazy">`
       }
       <div class="portfolio-item-overlay">
-        <h3>${item.title}</h3>
-        ${item.subtitle ? `<p class="portfolio-item-sub">${item.subtitle}</p>` : ''}
+        <h3>${title}</h3>
+        ${subtitle ? `<p class="portfolio-item-sub">${subtitle}</p>` : ''}
       </div>
     `;
 
     el.addEventListener('click', () => {
       if (!isPlaceholder) {
-        openModal(item.images, item.title, item.description);
+        const desc = item.description[currentLang] || item.description.es;
+        openModal(item.images, title, desc);
       }
     });
 
@@ -255,4 +431,26 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
   if (e.key === 'ArrowLeft') carouselPrev.click();
   if (e.key === 'ArrowRight') carouselNext.click();
+});
+
+// Touch swipe support for carousel (mobile)
+let touchStartX = 0;
+let touchEndX = 0;
+const SWIPE_THRESHOLD = 50;
+
+carouselContainer.addEventListener('touchstart', (e) => {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+carouselContainer.addEventListener('touchend', (e) => {
+  touchEndX = e.changedTouches[0].screenX;
+  const delta = touchEndX - touchStartX;
+  if (Math.abs(delta) < SWIPE_THRESHOLD) return;
+  if (delta < 0) carouselNext.click(); // swipe left → next
+  else carouselPrev.click();           // swipe right → prev
+}, { passive: true });
+
+// Recompute carousel position on viewport resize/orientation change
+window.addEventListener('resize', () => {
+  if (modal.classList.contains('active')) updateCarousel();
 });
