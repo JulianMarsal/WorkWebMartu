@@ -1,0 +1,6 @@
+# Word docs (credits, etc.) — not served on the site
+*.doc
+*.docx
+
+# Duplicate Drive export (keep only organized images/ tree)
+drive-download-*/

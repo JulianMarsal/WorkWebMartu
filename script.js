@@ -362,11 +362,14 @@ mobileToggle.addEventListener('click', () => {
 // Para ocultar: enabled: false (o image: '')
 // linkTo es la sección a la que va al clickear (obra/social/teatral/fx)
 const FEATURED_WORK = {
-  enabled: false,
-  image:   '',  // ej: 'images/featured-vaciada.jpg'
-  caption: { es: '',  en: '' },              // pequeño arriba, ej: 'Performance · 2023'
-  title:   { es: '',  en: '' },              // título grande
-  description: { es: '', en: '' },           // 1-2 líneas
+  enabled: true,
+  image:   'https://cdn.gamma.app/s6k4wiq7sjmzdft/b1ce23667c924a8babb1293f6d512172/original/IMG_1118.jpg',
+  caption: { es: 'Performance · 2023', en: 'Performance · 2023' },
+  title:   { es: 'VACIADA?', en: 'VACIADA?' },
+  description: {
+    es: 'Instalación-performática — Salón de Arte Joven.',
+    en: 'Performance-installation — Salón de Arte Joven.',
+  },
   linkTo:  'obra'
 };
 
@@ -457,17 +460,26 @@ const obraItems = [
 const socialItems = [
   {
     title: { es: 'Opacados — Lucía', en: 'Opacados — Lucía' },
-    images: ['placeholder-social-lucia-1.jpg'],
+    images: [
+      'images/Social/simulacros-1.jpg',
+      'images/Social/simulacros-2.jpg',
+    ],
     description: { es: 'Maquillaje social para Lucía.', en: 'Social makeup for Lucía.' }
   },
   {
     title: { es: 'Opacados — Dante', en: 'Opacados — Dante' },
-    images: ['placeholder-social-dante-1.jpg'],
+    images: [
+      'images/Social/simulacros-3.jpg',
+      'images/Social/simulacros-4.jpg',
+    ],
     description: { es: 'Maquillaje social para Dante.', en: 'Social makeup for Dante.' }
   },
   {
     title: { es: 'Mastermind — Mariposa y Rojo', en: 'Mastermind — Butterfly and Red' },
-    images: ['placeholder-social-mastermind-1.jpg'],
+    images: [
+      'images/Social/simulacros-5.jpg',
+      'images/Social/simulacros-6.jpg',
+    ],
     description: { es: 'Maquillaje social — Mastermind.', en: 'Social makeup — Mastermind.' }
   },
 ];
@@ -477,19 +489,34 @@ const teatralItems = [
   {
     title: { es: 'Maquillaje para Circo', en: 'Circus Makeup' },
     subtitle: { es: 'Alumnas', en: 'Students' },
-    images: ['placeholder-teatral-circo-alumnas-1.jpg'],
+    images: [
+      'images/Teatral/Teatral-1.jpg',
+      'images/Teatral/Teatral-2.png',
+      'images/Teatral/Teatral-3.png',
+      'images/Teatral/Teatral-4.png',
+    ],
     description: { es: 'Maquillaje para alumnas de circo.', en: 'Makeup for circus students.' }
   },
   {
     title: { es: 'Maquillaje para Circo', en: 'Circus Makeup' },
     subtitle: { es: 'Marina y amigas', en: 'Marina and friends' },
-    images: ['placeholder-teatral-circo-marina-1.jpg'],
+    images: [
+      'images/Teatral/Teatral-5.jpg',
+      'images/Teatral/Teatral-6.jpg',
+      'images/Teatral/Teatral-7.jpg',
+      'images/Teatral/Teatral-8.jpg',
+    ],
     description: { es: 'Maquillaje para circo — Marina y amigas, 2022.', en: 'Circus makeup — Marina and friends, 2022.' }
   },
   {
     title: { es: 'Vejez / Arlequín', en: 'Old Age / Harlequin' },
     subtitle: { es: 'Escuela de teatro', en: 'Theater school' },
-    images: ['placeholder-teatral-vejez-1.jpg'],
+    images: [
+      'images/Teatral/Teatral-9.jpg',
+      'images/Teatral/Teatral-10.jpg',
+      'images/Teatral/Teatral-11.jpg',
+      'images/Teatral/Teatral-12.jpg',
+    ],
     description: { es: 'Caracterización de vejez y arlequín para escuela de teatro.', en: 'Old-age and harlequin characterization for a theater school.' }
   },
 ];
@@ -503,17 +530,39 @@ const fxItems = [
   },
   {
     title: { es: 'Mastermind', en: 'Mastermind' },
-    images: ['placeholder-fx-mastermind-1.jpg'],
+    images: [
+      'images/FX/mastermind/mastermind-1.jpeg',
+      'images/FX/mastermind/mastermind-2.jpeg',
+      'images/FX/mastermind/mastermind-3.jpeg',
+      'images/FX/mastermind/mastermind-4.jpeg',
+      'images/FX/mastermind/mastermind-5.jpeg',
+    ],
     description: { es: 'Efectos especiales — Mastermind.', en: 'Special effects — Mastermind.' }
   },
   {
     title: { es: 'Opacados', en: 'Opacados' },
-    images: ['placeholder-fx-opacados-1.jpg'],
+    images: [
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-1.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-2.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-3.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-4.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-5.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-6.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-7.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-8.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-9.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-10.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-11.jpg',
+    ],
     description: { es: 'Efectos especiales para Opacados.', en: 'Special effects for Opacados.' }
   },
   {
     title: { es: 'Simulacro', en: 'Simulation' },
-    images: ['placeholder-fx-simulacro-1.jpg'],
+    images: [
+      'images/FX/simulacros/simulacros-1.jpeg',
+      'images/FX/simulacros/simulacros-2.jpeg',
+      'images/FX/simulacros/simulacros-3.jpeg',
+    ],
     description: { es: 'Maquillaje de efectos para simulacro.', en: 'Effects makeup for a simulation.' }
   },
 ];
