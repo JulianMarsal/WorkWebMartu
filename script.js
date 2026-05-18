@@ -463,22 +463,22 @@ const socialItems = [
     images: [
       'images/Social/simulacros-1.jpg',
       'images/Social/simulacros-2.jpg',
+      'images/Social/simulacros-3.jpg',
     ],
     description: { es: 'Maquillaje social para Lucía.', en: 'Social makeup for Lucía.' }
   },
   {
     title: { es: 'Opacados — Dante', en: 'Opacados — Dante' },
     images: [
-      'images/Social/simulacros-3.jpg',
-      'images/Social/simulacros-4.jpg',
+      'images/Social/simulacros-5.jpg',
+      'images/Social/simulacros-6.jpg',
     ],
     description: { es: 'Maquillaje social para Dante.', en: 'Social makeup for Dante.' }
   },
   {
     title: { es: 'Mastermind — Mariposa y Rojo', en: 'Mastermind — Butterfly and Red' },
     images: [
-      'images/Social/simulacros-5.jpg',
-      'images/Social/simulacros-6.jpg',
+      'images/Social/simulacros-4.jpg',
     ],
     description: { es: 'Maquillaje social — Mastermind.', en: 'Social makeup — Mastermind.' }
   },
