@@ -720,12 +720,36 @@ body.lang-changing main {
   box-shadow: 0 12px 28px rgba(184, 53, 46, 0.18);
 }
 
+/* Image preview behind the title — populated dynamically from each section's
+   first real image. Falls back to the colored gradient if no image loads. */
+.category-card-preview {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: scale(1.02);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.category-card-preview[style*="background-image"] {
+  opacity: 0.45;
+}
+
+.category-card:hover .category-card-preview {
+  opacity: 0.65;
+  transform: scale(1.06);
+}
+
 .category-card-inner {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 2rem;
+  z-index: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 55%, transparent 100%);
 }
 
 .category-card-inner h3 {
@@ -733,12 +757,15 @@ body.lang-changing main {
   font-size: 2rem;
   font-weight: 400;
   margin-bottom: 0.25rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .category-card-inner p {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.78);
   letter-spacing: 0.03em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -1043,33 +1070,62 @@ body.lang-changing main {
   color: var(--text-muted);
 }
 
-.portfolio-item-overlay {
+/* Caption: title + subtitle, ALWAYS visible (no longer hover-only) */
+.portfolio-item-caption {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  opacity: 0;
-  transition: opacity 0.3s;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem 1.25rem 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 55%, transparent 100%);
+  pointer-events: none;
+  transition: padding 0.3s;
 }
 
-.portfolio-item:hover .portfolio-item-overlay {
-  opacity: 1;
+.portfolio-item:hover .portfolio-item-caption {
+  padding-bottom: 1.25rem;
 }
 
-.portfolio-item-overlay h3 {
+.portfolio-item-caption h3 {
   font-family: var(--font-display);
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 400;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
 }
 
 .portfolio-item-sub {
   color: var(--accent-color);
-  font-size: 0.85rem;
-  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+/* Photo count badge — signals there are multiple photos inside */
+.portfolio-item-count {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.55rem;
+  background: rgba(10, 10, 10, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  z-index: 2;
+  letter-spacing: 0.02em;
+}
+
+.portfolio-item-count svg {
+  opacity: 0.85;
 }
 
 
@@ -1548,19 +1604,23 @@ footer {
     gap: 0.75rem;
   }
 
-  /* Show overlay always on mobile (no hover) */
-  .portfolio-item-overlay {
-    opacity: 1;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, transparent 60%);
-    padding: 0.75rem;
+  .portfolio-item-caption {
+    padding: 0.85rem 0.85rem 0.7rem;
   }
 
-  .portfolio-item-overlay h3 {
+  .portfolio-item-caption h3 {
     font-size: 1rem;
   }
 
   .portfolio-item-sub {
     font-size: 0.75rem;
+  }
+
+  .portfolio-item-count {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.72rem;
   }
 
   .placeholder-img {

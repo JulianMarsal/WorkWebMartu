@@ -58,7 +58,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
 
@@ -106,28 +106,7 @@
         </div>
       </header>
 
-      <!-- Featured Work — controlado por FEATURED_WORK en script.js
-           Para activar: poné enabled: true e image: 'images/...' -->
-      <section class="home-featured reveal" id="home-featured" hidden>
-        <div class="container">
-          <a class="featured-card" id="featured-card" href="#obra" data-nav="obra">
-            <div class="featured-image">
-              <img id="featured-img" src="" alt="">
-            </div>
-            <div class="featured-info">
-              <span class="featured-eyebrow" data-i18n="home.featuredEyebrow">Trabajo destacado</span>
-              <p class="featured-caption" id="featured-caption"></p>
-              <h2 id="featured-title"></h2>
-              <p class="featured-description" id="featured-description"></p>
-              <span class="featured-arrow" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-              </span>
-            </div>
-          </a>
-        </div>
-      </section>
-
-      <div class="home-about reveal">
+      <div class="home-about reveal" id="home-about">
         <div class="container">
           <div class="home-about-content">
             <div class="home-about-image">
@@ -157,24 +136,28 @@
           <h2 data-i18n="home.portfolio">Portfolio</h2>
           <div class="category-grid reveal-stagger">
             <a href="#obra" class="category-card category-obra" data-nav="obra">
+              <div class="category-card-preview" data-preview="obra" aria-hidden="true"></div>
               <div class="category-card-inner">
                 <h3 data-i18n="cat.obra.title">Obra</h3>
                 <p data-i18n="cat.obra.desc">Trabajo conceptual y performático</p>
               </div>
             </a>
             <a href="#social" class="category-card category-social" data-nav="social">
+              <div class="category-card-preview" data-preview="social" aria-hidden="true"></div>
               <div class="category-card-inner">
                 <h3 data-i18n="cat.social.title">Social</h3>
                 <p data-i18n="cat.social.desc">Maquillaje social y eventos</p>
               </div>
             </a>
             <a href="#teatral" class="category-card category-teatral" data-nav="teatral">
+              <div class="category-card-preview" data-preview="teatral" aria-hidden="true"></div>
               <div class="category-card-inner">
                 <h3 data-i18n="cat.teatral.title">Teatral</h3>
                 <p data-i18n="cat.teatral.desc">Circo, teatro y escena</p>
               </div>
             </a>
             <a href="#fx" class="category-card category-fx" data-nav="fx">
+              <div class="category-card-preview" data-preview="fx" aria-hidden="true"></div>
               <div class="category-card-inner">
                 <h3 data-i18n="cat.fx.title">FX</h3>
                 <p data-i18n="cat.fx.desc">Efectos especiales y prótesis</p>
@@ -184,25 +167,6 @@
         </div>
       </div>
 
-      <div class="home-videos reveal">
-        <div class="container">
-          <h2 data-i18n="home.videos">Videos</h2>
-          <div class="video-grid reveal-stagger">
-            <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/0QTEAFoMO2k?si=v9x-pnEBhXsLz_gT" frameborder="0" allowfullscreen loading="lazy"></iframe>
-              <div class="video-info"><h3>Stop motion cicatriz</h3></div>
-            </div>
-            <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/qNUWiEVVUkA?si=Na2sTM3R2vg2KGsr" frameborder="0" allowfullscreen loading="lazy"></iframe>
-              <div class="video-info"><h3>Arder</h3></div>
-            </div>
-            <div class="video-item">
-              <iframe src="https://www.youtube.com/embed/t0noBVTbFLk?si=Hui4emOYfoM0AJVN" frameborder="0" allowfullscreen loading="lazy"></iframe>
-              <div class="video-info"><h3>Vaciada</h3></div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
     <!-- PAGE: CURSOS -->
@@ -426,6 +390,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>

@@ -233,9 +233,8 @@ function applyLanguage(lang) {
   }
   if (waTip) waTip.textContent = t('wa.tooltip');
 
-  // Re-render dynamic content (portfolio + featured)
+  // Re-render dynamic content (portfolio)
   renderPortfolios();
-  if (typeof renderFeaturedWork === 'function') renderFeaturedWork();
 }
 
 // Smooth language transition wrapper
@@ -353,57 +352,6 @@ document.addEventListener('click', (e) => {
 mobileToggle.addEventListener('click', () => {
   menuItems.classList.toggle('open');
 });
-
-
-// ════════════════════════════════════════
-// FEATURED WORK (toggleable)
-// ════════════════════════════════════════
-// Para mostrar: poné enabled: true + image: 'images/foo.jpg'
-// Para ocultar: enabled: false (o image: '')
-// linkTo es la sección a la que va al clickear (obra/social/teatral/fx)
-const FEATURED_WORK = {
-  enabled: true,
-  image:   'https://cdn.gamma.app/s6k4wiq7sjmzdft/b1ce23667c924a8babb1293f6d512172/original/IMG_1118.jpg',
-  caption: { es: 'Performance · 2023', en: 'Performance · 2023' },
-  title:   { es: 'VACIADA?', en: 'VACIADA?' },
-  description: {
-    es: 'Instalación-performática — Salón de Arte Joven.',
-    en: 'Performance-installation — Salón de Arte Joven.',
-  },
-  linkTo:  'obra'
-};
-
-function renderFeaturedWork() {
-  const section = document.getElementById('home-featured');
-  if (!section) return;
-
-  const show = FEATURED_WORK.enabled && FEATURED_WORK.image;
-  section.hidden = !show;
-  if (!show) return;
-
-  const img         = document.getElementById('featured-img');
-  const caption     = document.getElementById('featured-caption');
-  const title       = document.getElementById('featured-title');
-  const description = document.getElementById('featured-description');
-  const card        = document.getElementById('featured-card');
-
-  const pick = (obj) => (obj && (obj[currentLang] || obj.es)) || '';
-
-  img.src = FEATURED_WORK.image;
-  img.alt = pick(FEATURED_WORK.title);
-  caption.textContent     = pick(FEATURED_WORK.caption);
-  title.textContent       = pick(FEATURED_WORK.title);
-  description.textContent = pick(FEATURED_WORK.description);
-
-  if (FEATURED_WORK.linkTo) {
-    card.setAttribute('href', `#${FEATURED_WORK.linkTo}`);
-    card.setAttribute('data-nav', FEATURED_WORK.linkTo);
-  }
-
-  // Hide caption/description if empty so they don't add blank space
-  caption.style.display     = caption.textContent     ? '' : 'none';
-  description.style.display = description.textContent ? '' : 'none';
-}
 
 
 // ════════════════════════════════════════
@@ -576,12 +524,35 @@ function renderPortfolios() {
   renderGrid('grid-social',  socialItems);
   renderGrid('grid-teatral', teatralItems);
   renderGrid('grid-fx',      fxItems);
+  renderCategoryPreviews();
+}
+
+// Pick the first real (non-placeholder) image from each section to use as
+// the home category card background preview.
+function renderCategoryPreviews() {
+  const map = {
+    obra:    obraItems,
+    social:  socialItems,
+    teatral: teatralItems,
+    fx:      fxItems,
+  };
+  Object.entries(map).forEach(([key, items]) => {
+    const item = items.find(i => i.images && i.images[0] && !i.images[0].startsWith('placeholder'));
+    if (!item) return;
+    const target = document.querySelector(`.category-card[data-nav="${key}"] .category-card-preview`);
+    if (target) target.style.backgroundImage = `url("${item.images[0]}")`;
+  });
 }
 
 function renderGrid(containerId, items) {
   const container = document.getElementById(containerId);
   if (!container) return;
   container.innerHTML = '';
+
+  const photoLabel = (n) => {
+    if (currentLang === 'en') return n === 1 ? '1 photo' : `${n} photos`;
+    return n === 1 ? '1 foto' : `${n} fotos`;
+  };
 
   items.forEach(item => {
     const el = document.createElement('div');
@@ -590,24 +561,34 @@ function renderGrid(containerId, items) {
     const isPlaceholder = item.images[0].startsWith('placeholder');
     const title    = item.title[currentLang]    || item.title.es;
     const subtitle = item.subtitle ? (item.subtitle[currentLang] || item.subtitle.es) : '';
+    const count    = item.images.length;
+
+    const countBadge = (!isPlaceholder && count > 1)
+      ? `<span class="portfolio-item-count" aria-label="${photoLabel(count)}">
+           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="2"></rect><path d="M7 7h14v14H7z"></path></svg>
+           ${count}
+         </span>`
+      : '';
+
+    const captionBlock = `
+      <div class="portfolio-item-caption">
+        <h3>${title}</h3>
+        ${subtitle ? `<p class="portfolio-item-sub">${subtitle}</p>` : ''}
+      </div>
+    `;
 
     if (isPlaceholder) {
       el.innerHTML = `
         <div class="placeholder-img"><span>${title}</span></div>
-        <div class="portfolio-item-overlay">
-          <h3>${title}</h3>
-          ${subtitle ? `<p class="portfolio-item-sub">${subtitle}</p>` : ''}
-        </div>
+        ${captionBlock}
       `;
     } else {
       // Real image: add skeleton class while loading, remove on load/error
       el.classList.add('is-loading');
       el.innerHTML = `
         <img src="${item.images[0]}" alt="${title}" loading="lazy">
-        <div class="portfolio-item-overlay">
-          <h3>${title}</h3>
-          ${subtitle ? `<p class="portfolio-item-sub">${subtitle}</p>` : ''}
-        </div>
+        ${countBadge}
+        ${captionBlock}
       `;
       const img = el.querySelector('img');
       const stopLoading = () => el.classList.remove('is-loading');
@@ -620,10 +601,7 @@ function renderGrid(containerId, items) {
           el.classList.remove('is-loading');
           el.innerHTML = `
             <div class="placeholder-img"><span>${title}</span></div>
-            <div class="portfolio-item-overlay">
-              <h3>${title}</h3>
-              ${subtitle ? `<p class="portfolio-item-sub">${subtitle}</p>` : ''}
-            </div>
+            ${captionBlock}
           `;
         }, { once: true });
       }
