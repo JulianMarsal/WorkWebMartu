@@ -1070,62 +1070,35 @@ body.lang-changing main {
   color: var(--text-muted);
 }
 
-/* Caption: title + subtitle, ALWAYS visible (no longer hover-only) */
-.portfolio-item-caption {
+/* Small chip showing which project this photo belongs to.
+   Always visible (subtle), more opaque on hover. */
+.portfolio-item-tag {
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1.25rem 1.25rem 1rem;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 55%, transparent 100%);
-  pointer-events: none;
-  transition: padding 0.3s;
-}
-
-.portfolio-item:hover .portfolio-item-caption {
-  padding-bottom: 1.25rem;
-}
-
-.portfolio-item-caption h3 {
-  font-family: var(--font-display);
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: 1.2;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
-}
-
-.portfolio-item-sub {
-  color: var(--accent-color);
-  font-size: 0.8rem;
-  margin-top: 0.2rem;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
-}
-
-/* Photo count badge — signals there are multiple photos inside */
-.portfolio-item-count {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.3rem 0.55rem;
-  background: rgba(10, 10, 10, 0.7);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  color: #fff;
-  font-size: 0.78rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  max-width: calc(100% - 1.5rem);
+  padding: 0.3rem 0.65rem;
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.72rem;
   font-weight: 500;
+  letter-spacing: 0.02em;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   pointer-events: none;
   z-index: 2;
-  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.85;
+  transition: opacity 0.25s, transform 0.25s;
 }
 
-.portfolio-item-count svg {
-  opacity: 0.85;
+.portfolio-item:hover .portfolio-item-tag {
+  opacity: 1;
+  transform: translateY(-2px);
 }
 
 
@@ -1314,6 +1287,10 @@ body.lang-changing main {
 
 .cv-download {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .download-button {
@@ -1337,6 +1314,29 @@ body.lang-changing main {
 .download-button:hover {
   background: transparent;
   color: var(--accent-color);
+}
+
+/* Secondary action: plain text link with download icon */
+.download-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.75rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  border-radius: 6px;
+  transition: color 0.25s, background-color 0.25s;
+}
+
+.download-link:hover {
+  color: var(--accent-color);
+  background: rgba(var(--accent-rgb, 184, 53, 46), 0.08);
+}
+
+.download-link svg {
+  opacity: 0.7;
 }
 
 /* CV Content */
@@ -1604,23 +1604,11 @@ footer {
     gap: 0.75rem;
   }
 
-  .portfolio-item-caption {
-    padding: 0.85rem 0.85rem 0.7rem;
-  }
-
-  .portfolio-item-caption h3 {
-    font-size: 1rem;
-  }
-
-  .portfolio-item-sub {
-    font-size: 0.75rem;
-  }
-
-  .portfolio-item-count {
-    top: 0.5rem;
-    right: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.72rem;
+  .portfolio-item-tag {
+    bottom: 0.5rem;
+    left: 0.5rem;
+    padding: 0.22rem 0.5rem;
+    font-size: 0.68rem;
   }
 
   .placeholder-img {

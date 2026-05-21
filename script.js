@@ -57,8 +57,8 @@ const translations = {
     'page.contacto.title': 'Contacto & CV',
 
     'contacto.title':    'Contactame',
-    'contacto.download': 'Descargar CV',
-    'contacto.cvSoon':   'El CV estará disponible próximamente.',
+    'contacto.view':     'Ver CV',
+    'contacto.download': 'Descargar PDF',
 
     'wa.tooltip': 'Escribime por WhatsApp',
     'wa.message': 'Hola Martina, te escribo desde tu portfolio.',
@@ -145,8 +145,8 @@ const translations = {
     'page.contacto.title': 'Contact & CV',
 
     'contacto.title':    'Get in touch',
-    'contacto.download': 'Download CV',
-    'contacto.cvSoon':   'The CV will be available soon.',
+    'contacto.view':     'View CV',
+    'contacto.download': 'Download PDF',
 
     'wa.tooltip': 'Message me on WhatsApp',
     'wa.message': 'Hi Martina, I\'m writing from your portfolio.',
@@ -261,13 +261,6 @@ if (langSwitch) {
     setLanguage(currentLang === 'es' ? 'en' : 'es');
   });
 }
-
-// CV download handler (uses translated alert)
-document.getElementById('cv-download-btn').addEventListener('click', (e) => {
-  e.preventDefault();
-  alert(t('contacto.cvSoon'));
-});
-
 
 // ════════════════════════════════════════
 // ROUTING
@@ -544,52 +537,37 @@ function renderCategoryPreviews() {
   });
 }
 
+// Flat render: one card per image. The data stays grouped by project, but
+// each photo gets its own tile and a small tag indicating its parent group.
+// Clicking still opens the modal with all the group's photos so context is preserved.
 function renderGrid(containerId, items) {
   const container = document.getElementById(containerId);
   if (!container) return;
   container.innerHTML = '';
 
-  const photoLabel = (n) => {
-    if (currentLang === 'en') return n === 1 ? '1 photo' : `${n} photos`;
-    return n === 1 ? '1 foto' : `${n} fotos`;
-  };
-
   items.forEach(item => {
-    const el = document.createElement('div');
-    el.className = 'portfolio-item';
-
+    const title       = item.title[currentLang]    || item.title.es;
+    const subtitle    = item.subtitle ? (item.subtitle[currentLang] || item.subtitle.es) : '';
+    const description = item.description[currentLang] || item.description.es;
+    const tag         = subtitle ? `${title} · ${subtitle}` : title;
     const isPlaceholder = item.images[0].startsWith('placeholder');
-    const title    = item.title[currentLang]    || item.title.es;
-    const subtitle = item.subtitle ? (item.subtitle[currentLang] || item.subtitle.es) : '';
-    const count    = item.images.length;
-
-    const countBadge = (!isPlaceholder && count > 1)
-      ? `<span class="portfolio-item-count" aria-label="${photoLabel(count)}">
-           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="2"></rect><path d="M7 7h14v14H7z"></path></svg>
-           ${count}
-         </span>`
-      : '';
-
-    const captionBlock = `
-      <div class="portfolio-item-caption">
-        <h3>${title}</h3>
-        ${subtitle ? `<p class="portfolio-item-sub">${subtitle}</p>` : ''}
-      </div>
-    `;
 
     if (isPlaceholder) {
+      const el = document.createElement('div');
+      el.className = 'portfolio-item';
+      el.innerHTML = `<div class="placeholder-img"><span>${title}</span></div>`;
+      container.appendChild(el);
+      return;
+    }
+
+    item.images.forEach((src, idx) => {
+      const el = document.createElement('div');
+      el.className = 'portfolio-item is-loading';
       el.innerHTML = `
-        <div class="placeholder-img"><span>${title}</span></div>
-        ${captionBlock}
+        <img src="${src}" alt="${title}" loading="lazy">
+        <span class="portfolio-item-tag">${tag}</span>
       `;
-    } else {
-      // Real image: add skeleton class while loading, remove on load/error
-      el.classList.add('is-loading');
-      el.innerHTML = `
-        <img src="${item.images[0]}" alt="${title}" loading="lazy">
-        ${countBadge}
-        ${captionBlock}
-      `;
+
       const img = el.querySelector('img');
       const stopLoading = () => el.classList.remove('is-loading');
       if (img.complete) {
@@ -597,24 +575,17 @@ function renderGrid(containerId, items) {
       } else {
         img.addEventListener('load',  stopLoading, { once: true });
         img.addEventListener('error', () => {
-          // If the image fails (e.g. dead Gamma URL), fall back to a placeholder
           el.classList.remove('is-loading');
-          el.innerHTML = `
-            <div class="placeholder-img"><span>${title}</span></div>
-            ${captionBlock}
-          `;
+          el.innerHTML = `<div class="placeholder-img"><span>${title}</span></div>`;
         }, { once: true });
       }
-    }
 
-    el.addEventListener('click', () => {
-      if (!isPlaceholder) {
-        const desc = item.description[currentLang] || item.description.es;
-        openModal(item.images, title, desc);
-      }
+      el.addEventListener('click', () => {
+        openModal(item.images, title, description, idx);
+      });
+
+      container.appendChild(el);
     });
-
-    container.appendChild(el);
   });
 }
 
@@ -633,9 +604,9 @@ const modalDescription = document.getElementById('modal-description');
 let currentImageIndex = 0;
 let currentImages = [];
 
-function openModal(images, title, description) {
+function openModal(images, title, description, startIndex = 0) {
   currentImages = images;
-  currentImageIndex = 0;
+  currentImageIndex = Math.max(0, Math.min(startIndex, images.length - 1));
 
   carouselContainer.innerHTML = '';
   currentImages.forEach((image) => {
