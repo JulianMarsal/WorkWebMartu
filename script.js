@@ -73,9 +73,9 @@ const translations = {
     'cv.exp.fam.title':          'Artista Visual — Evento "Fam Up"',
     'cv.exp.fam.meta':           'Laguna de Gómez, Junín • 2019',
 
-    'cv.edu.lic.title':  'Licenciatura en Artes Plásticas (Pintura)',
+    'cv.edu.lic.title':  'Licenciatura en Artes Plásticas (Grado, Especialidad Pintura)',
     'cv.edu.lic.meta':   'UNLP — Facultad de Artes • 2018 – 2023',
-    'cv.edu.prof.title': 'Profesorado en Artes Plásticas (Pintura)',
+    'cv.edu.prof.title': 'Profesorado en Artes Plásticas (Grado, Especialidad Pintura)',
     'cv.edu.prof.meta':  'UNLP — Facultad de Artes • 2018 – 2024',
     'cv.edu.tela.title': 'Profesorado de Acrobacia en Telas',
     'cv.edu.tela.meta':  'Alto Vuelo, Junín • 2015 – 2017',
