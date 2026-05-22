@@ -67,7 +67,6 @@ const translations = {
     'cv.edu':    'Educación',
     'cv.skills': 'Habilidades',
 
-    'cv.exp.docente.title':      'Docente de Acrobacia Aérea en Telas',
     'cv.exp.docente.meta':       'Centro Cultural "El Clú", Berisso • 2023 – Presente',
     'cv.exp.audiovisual.title':  'Creadora de Contenido Audiovisual',
     'cv.exp.audiovisual.meta':   'V-Tech Gaming, Buenos Aires • Feb 2022 – Feb 2023',
@@ -155,7 +154,6 @@ const translations = {
     'cv.edu':    'Education',
     'cv.skills': 'Skills',
 
-    'cv.exp.docente.title':      'Aerial Silks Acrobatics Teacher',
     'cv.exp.docente.meta':       '"El Clú" Cultural Center, Berisso • 2023 – Present',
     'cv.exp.audiovisual.title':  'Audiovisual Content Creator',
     'cv.exp.audiovisual.meta':   'V-Tech Gaming, Buenos Aires • Feb 2022 – Feb 2023',
