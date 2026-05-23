@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://julianmarsal.github.io/sitemap.xml
+Sitemap: https://martinaparola.art/sitemap.xml
