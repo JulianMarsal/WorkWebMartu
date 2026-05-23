@@ -1122,8 +1122,9 @@ body.lang-changing main {
 
 .modal-content {
   position: relative;
-  width: 70%;
-  max-height: 85vh;
+  width: 92%;
+  max-width: 1400px;
+  height: 92vh;
   background: var(--surface-color);
   border-radius: 12px;
   overflow: hidden;
@@ -1158,7 +1159,8 @@ body.lang-changing main {
 
 .modal-carousel {
   position: relative;
-  height: 55vh;
+  flex: 1;
+  min-height: 0;
   background: black;
   overflow: hidden;
 }
@@ -1166,6 +1168,7 @@ body.lang-changing main {
 .carousel-container {
   height: 100%;
   display: flex;
+  transition: transform 0.3s ease;
 }
 
 .carousel-item {
@@ -1174,7 +1177,7 @@ body.lang-changing main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 0.5rem;
   min-width: 100%;
 }
 
@@ -1370,6 +1373,25 @@ body.lang-changing main {
   font-size: 0.85rem;
 }
 
+/* Sub-projects list inside a CV item (e.g. freelance projects with details) */
+.cv-projects {
+  list-style: none;
+  margin: 0.5rem 0 0 0;
+  padding: 0 0 0 0.85rem;
+  border-left: 2px solid rgba(var(--accent-rgb, 184, 53, 46), 0.3);
+}
+
+.cv-projects li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: 0.3rem 0;
+  line-height: 1.5;
+}
+
+.cv-projects li + li {
+  border-top: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
 .cv-skills {
   display: flex;
   flex-wrap: wrap;
@@ -1495,7 +1517,7 @@ footer {
   }
 
   .modal-content {
-    width: 90%;
+    width: 96%;
   }
 
   /* Featured Work: stack image and info on tablet */
@@ -1638,11 +1660,7 @@ footer {
 
   .modal-content {
     width: 100%;
-    max-height: 92vh;
-  }
-
-  .modal-carousel {
-    height: 50vh;
+    height: 95vh;
   }
 
   .carousel-button {

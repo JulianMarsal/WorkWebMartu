@@ -37,13 +37,14 @@ const translations = {
     'curso.auto.f2':    'Productos y herramientas básicas',
     'curso.auto.f3':    'Adaptación a tu tipo de piel y rasgos',
     'curso.auto.f4':    'Material y guía descargable',
-    'curso.art.title':  'Maquillaje Artístico',
-    'curso.art.desc':   'Taller de maquillaje artístico y efectos. Técnicas de caracterización, prótesis y diseño de personajes.',
+    'curso.art.title':  'Maquillaje FX forense — inicial',
+    'curso.art.desc':   'Taller de maquillaje de caracterización y heridas. Técnicas de caracterización, prótesis y diseño de personajes.',
     'curso.art.f1':     'Caracterización y diseño de personajes',
-    'curso.art.f2':     'Aplicación de prótesis de silicona y látex',
-    'curso.art.f3':     'Heridas, sangre y efectos de trauma',
-    'curso.art.f4':     'Body painting y técnicas pictóricas',
-    'curso.modality':   'Presencial · Oviedo',
+    'curso.art.f2':     'Creación de hematomas',
+    'curso.art.f3':     'Heridas y efectos de trauma',
+    'curso.art.f4':     'Creación de sangre falsa',
+    'curso.art.f5':     'Vejez con látex',
+    'curso.modality':   'Online · España',
     'curso.cta':        'Consultar',
 
     'page.obra.title':     'Obra',
@@ -63,28 +64,37 @@ const translations = {
     'wa.tooltip': 'Escribime por WhatsApp',
     'wa.message': 'Hola Martina, te escribo desde tu portfolio.',
 
-    'cv.exp':    'Experiencia',
+    'cv.exp':    'Experiencia profesional',
     'cv.edu':    'Educación',
     'cv.skills': 'Habilidades',
 
-    'cv.exp.docente.meta':       'Centro Cultural "El Clú", Berisso • 2023 – Presente',
+    'cv.exp.cruzroja.title':     'Maquilladora Profesional y FX — Simulacros Oficiales de Emergencia',
+    'cv.exp.cruzroja.meta':      'Cruz Roja Argentina • 2025',
+    'cv.exp.gritos.title':       'Caracterizadora y Maquilladora',
+    'cv.exp.gritos.meta':        'Festival Internacional de Cine de Terror y Fantasía "Gritos en el Planetario", IV edición — La Plata, Buenos Aires • 2025',
+    'cv.exp.ficpba.title':       'Docente de Técnicas Profesionales de Maquillaje FX Forense',
+    'cv.exp.ficpba.meta':        'Festival Internacional de Cine de la Provincia de Buenos Aires, FICPBA 3.ª edición • 2025',
+    'cv.exp.mastermind.title':   'Maquilladora, Caracterizadora y Efectista — Prótesis y Maquillaje Social',
+    'cv.exp.mastermind.meta':    'Producciones fotográficas "Mastermind" • 2024 – 2025',
+    'cv.exp.freelance.title':    'Maquilladora Profesional, Social, Caracterizadora y Efectista',
+    'cv.exp.freelance.meta':     'Proyectos freelance — Videoclip, cortometrajes y producciones audiovisuales • 2024 – 2025',
+    'cv.exp.freelance.proj1':    'Cortometraje Los Opacados (2025): creación y aplicación de prótesis, maquillaje HD para cámara y caracterización de personajes.',
+    'cv.exp.freelance.proj2':    'Cortometraje La Purificación — Facultad de Bellas Artes de La Plata (2025): desarrollo de prótesis, sistema de salpicado de sangre y maquillaje FX.',
+    'cv.exp.freelance.proj3':    'Videoclip Aletea (2024): creación y aplicación de prótesis, maquillaje artístico y maquillaje social.',
     'cv.exp.audiovisual.title':  'Creadora de Contenido Audiovisual',
-    'cv.exp.audiovisual.meta':   'V-Tech Gaming, Buenos Aires • Feb 2022 – Feb 2023',
-    'cv.exp.fam.title':          'Artista Visual — Evento "Fam Up"',
-    'cv.exp.fam.meta':           'Laguna de Gómez, Junín • 2019',
+    'cv.exp.audiovisual.meta':   'Tech Gaming, Buenos Aires • Feb 2022 – Feb 2023',
+    'cv.exp.fam.title':          'Artista Visual — Bodypainting y Caracterización',
+    'cv.exp.fam.meta':           'Evento Fam Up — Laguna de Gómez, Junín • 2019',
 
     'cv.edu.lic.title':  'Licenciatura en Artes Plásticas (Grado, Especialidad Pintura)',
     'cv.edu.lic.meta':   'UNLP — Facultad de Artes • 2018 – 2023',
     'cv.edu.prof.title': 'Profesorado en Artes Plásticas (Grado, Especialidad Pintura)',
     'cv.edu.prof.meta':  'UNLP — Facultad de Artes • 2018 – 2024',
-    'cv.edu.tela.title': 'Profesorado de Acrobacia en Telas',
-    'cv.edu.tela.meta':  'Alto Vuelo, Junín • 2015 – 2017',
 
     'skill.maquillaje':  'Maquillaje artístico',
     'skill.fx':          'Efectos especiales',
     'skill.protesis':    'Prótesis',
     'skill.pintura':     'Pintura',
-    'skill.acrobacia':   'Acrobacia aérea',
     'skill.audiovisual': 'Producción audiovisual',
     'skill.ingles':      'Inglés avanzado',
   },
@@ -124,13 +134,14 @@ const translations = {
     'curso.auto.f2':    'Essential products and tools',
     'curso.auto.f3':    'Adapted to your skin type and features',
     'curso.auto.f4':    'Downloadable material and guide',
-    'curso.art.title':  'Artistic Makeup',
-    'curso.art.desc':   'Artistic makeup and effects workshop. Character design, prosthetics, and characterization techniques.',
+    'curso.art.title':  'Forensic FX Makeup — Beginner',
+    'curso.art.desc':   'Characterization and wound makeup workshop. Characterization techniques, prosthetics, and character design.',
     'curso.art.f1':     'Characterization and character design',
-    'curso.art.f2':     'Silicone and latex prosthetic application',
-    'curso.art.f3':     'Wounds, blood and trauma effects',
-    'curso.art.f4':     'Body painting and pictorial techniques',
-    'curso.modality':   'In-person · Oviedo',
+    'curso.art.f2':     'Bruise creation',
+    'curso.art.f3':     'Wounds and trauma effects',
+    'curso.art.f4':     'Fake blood creation',
+    'curso.art.f5':     'Old age effects with latex',
+    'curso.modality':   'Online · Spain',
     'curso.cta':        'Inquire',
 
     'page.obra.title':     'Art',
@@ -150,28 +161,37 @@ const translations = {
     'wa.tooltip': 'Message me on WhatsApp',
     'wa.message': 'Hi Martina, I\'m writing from your portfolio.',
 
-    'cv.exp':    'Experience',
+    'cv.exp':    'Professional experience',
     'cv.edu':    'Education',
     'cv.skills': 'Skills',
 
-    'cv.exp.docente.meta':       '"El Clú" Cultural Center, Berisso • 2023 – Present',
+    'cv.exp.cruzroja.title':     'Professional Makeup Artist & SFX — Official Emergency Drills',
+    'cv.exp.cruzroja.meta':      'Argentine Red Cross • 2025',
+    'cv.exp.gritos.title':       'Character & Makeup Artist',
+    'cv.exp.gritos.meta':        'International Horror and Fantasy Film Festival "Gritos en el Planetario", 4th edition — La Plata, Buenos Aires • 2025',
+    'cv.exp.ficpba.title':       'Instructor of Professional Forensic FX Makeup Techniques',
+    'cv.exp.ficpba.meta':        'International Film Festival of Buenos Aires Province, FICPBA 3rd edition • 2025',
+    'cv.exp.mastermind.title':   'Makeup Artist, Character & SFX — Prosthetics and Social Makeup',
+    'cv.exp.mastermind.meta':    '"Mastermind" Photo Productions • 2024 – 2025',
+    'cv.exp.freelance.title':    'Professional, Social, Character & SFX Makeup Artist',
+    'cv.exp.freelance.meta':     'Freelance projects — Music videos, short films and audiovisual productions • 2024 – 2025',
+    'cv.exp.freelance.proj1':    'Short film Los Opacados (2025): prosthetic design and application, HD makeup for camera, and character work.',
+    'cv.exp.freelance.proj2':    'Short film La Purificación — School of Fine Arts, La Plata (2025): prosthetic development, blood-splatter system and FX makeup.',
+    'cv.exp.freelance.proj3':    'Music video Aletea (2024): prosthetic design and application, artistic makeup and social makeup.',
     'cv.exp.audiovisual.title':  'Audiovisual Content Creator',
-    'cv.exp.audiovisual.meta':   'V-Tech Gaming, Buenos Aires • Feb 2022 – Feb 2023',
-    'cv.exp.fam.title':          'Visual Artist — "Fam Up" Event',
-    'cv.exp.fam.meta':           'Laguna de Gómez, Junín • 2019',
+    'cv.exp.audiovisual.meta':   'Tech Gaming, Buenos Aires • Feb 2022 – Feb 2023',
+    'cv.exp.fam.title':          'Visual Artist — Bodypainting & Characterization',
+    'cv.exp.fam.meta':           'Fam Up Event — Laguna de Gómez, Junín • 2019',
 
     'cv.edu.lic.title':  'Bachelor\'s Degree in Visual Arts (Painting)',
     'cv.edu.lic.meta':   'UNLP — School of Arts • 2018 – 2023',
     'cv.edu.prof.title': 'Teaching Degree in Visual Arts (Painting)',
     'cv.edu.prof.meta':  'UNLP — School of Arts • 2018 – 2024',
-    'cv.edu.tela.title': 'Teaching Degree in Aerial Silks',
-    'cv.edu.tela.meta':  'Alto Vuelo, Junín • 2015 – 2017',
 
     'skill.maquillaje':  'Artistic makeup',
     'skill.fx':          'Special effects',
     'skill.protesis':    'Prosthetics',
     'skill.pintura':     'Painting',
-    'skill.acrobacia':   'Aerial acrobatics',
     'skill.audiovisual': 'Audiovisual production',
     'skill.ingles':      'Advanced English',
   }
@@ -355,42 +375,18 @@ const obraItems = [
     title: { es: 'VACIADA?', en: 'VACIADA?' },
     subtitle: { es: '2023 · Salón de Arte Joven', en: '2023 · Salón de Arte Joven' },
     images: [
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/b1ce23667c924a8babb1293f6d512172/original/IMG_1118.jpg',
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/50322309881e4b2aa876c4bdcf215673/original/IMG_1053.jpg',
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/b06798d7507b40188b6eafd4dca095e2/original/IMG_1065.jpg',
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/0cb4846a010647b1b7f7c4d7368de9d7/original/instalacion_Parola-Salon-de-arte-joven-2023-2.jpg',
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/4e616c6eaacc4a0a869b6c780eabf850/original/IMG_1079.jpg',
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/8c3ffb5ece3b41c2b21f96b9dedceafb/original/instalacion_parola-Salon-de-arte-joven-2023-3.jpg',
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/9c674b23a2234443b7d9a0fc0a45f0e4/original/IMG_1108.jpg',
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/c1df54fc0a15487f86145211c7263a46/original/20231108_120745.jpg'
+      'images/Obra/vaciada-1.jpg',
+      'images/Obra/vaciada-2.jpg',
+      'images/Obra/vaciada-3.jpg',
+      'images/Obra/vaciada-4.jpg',
+      'images/Obra/vaciada-5.jpg',
+      'images/Obra/vaciada-6.jpg',
+      'images/Obra/vaciada-7.jpg',
+      'images/Obra/vaciada-8.jpg',
     ],
     description: {
       es: 'Instalación-performática sobre el cuestionamiento del uso coloquial "vaciado/vaciada" ante la operación de la histerectomía. Me empiezo a preguntar por las connotaciones que trae, cuánto poder, cuántas pretensiones y cuánto dolor. La propuesta de este trabajo de final de grado fue realizar una conceptualización performática, que pone en tela de juicio el nombre de uso coloquial de "vaciada" ante la operación.',
       en: 'A performance-installation questioning the colloquial use of "emptied/emptied-out" to refer to hysterectomy surgery. I begin to question its connotations — how much power, how many pretenses, how much pain it carries. This thesis project proposes a performative conceptualization that puts into question the colloquial naming of "emptied" for the operation.'
-    }
-  },
-  {
-    title: { es: 'La piel como lienzo, el lienzo como piel', en: 'Skin as canvas, canvas as skin' },
-    subtitle: { es: '2022', en: '2022' },
-    images: [
-      'https://imgproxy.gamma.app/resize/quality:80/resizing_type:fit/width:1200/https://cdn.gamma.app/s6k4wiq7sjmzdft/f700359dca37469496be8129acee5fb9/original/20230410_133347.jpg'
-    ],
-    description: {
-      es: '¿Cuánto puede soportar una piel? ¿Y una pintura? ¿Qué esconden? ¿Qué develan?',
-      en: 'How much can a skin endure? And a painting? What do they hide? What do they reveal?'
-    }
-  },
-  {
-    title: { es: 'La degradación de la mirada', en: 'The degradation of the gaze' },
-    subtitle: { es: '2022 · UNLP', en: '2022 · UNLP' },
-    images: [
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/12ad92c1c2144869b6ab87a6bf5740ef/original/IMG_9442.jpg',
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/0aba9c3ce0aa4ba28c0eec429de25828/original/IMG_9652.jpg',
-      'https://cdn.gamma.app/s6k4wiq7sjmzdft/551b6cb6350b4010a658b634f4eccd32/original/IMG_9658.jpg'
-    ],
-    description: {
-      es: 'Obra realizada en el marco de la Universidad Nacional de La Plata. Descripción pendiente.',
-      en: 'Work produced within the National University of La Plata. Description pending.'
     }
   },
 ];
@@ -403,6 +399,7 @@ const socialItems = [
       'images/Social/simulacros-1.jpg',
       'images/Social/simulacros-2.jpg',
       'images/Social/simulacros-3.jpg',
+      'images/Social/simulacros-12.jpg',
     ],
     description: { es: 'Maquillaje social para Lucía.', en: 'Social makeup for Lucía.' }
   },
@@ -418,8 +415,13 @@ const socialItems = [
     title: { es: 'Mastermind — Mariposa y Rojo', en: 'Mastermind — Butterfly and Red' },
     images: [
       'images/Social/simulacros-4.jpg',
+      'images/Social/simulacros-7.jpg',
+      'images/Social/simulacros-8.jpg',
+      'images/Social/simulacros-9.jpg',
+      'images/Social/simulacros-10.jpg',
+      'images/Social/simulacros-11.jpg',
     ],
-    description: { es: 'Maquillaje social — Mastermind.', en: 'Social makeup — Mastermind.' }
+    description: { es: 'Maquillaje y caracterización para Mastermind — personaje Mariposa.', en: 'Makeup and characterization for Mastermind — Butterfly character.' }
   },
 ];
 
@@ -448,15 +450,21 @@ const teatralItems = [
     description: { es: 'Maquillaje para circo — Marina y amigas, 2022.', en: 'Circus makeup — Marina and friends, 2022.' }
   },
   {
-    title: { es: 'Vejez / Arlequín', en: 'Old Age / Harlequin' },
+    title: { es: 'Maquillaje para Circo', en: 'Circus Makeup' },
     subtitle: { es: 'Escuela de teatro', en: 'Theater school' },
     images: [
       'images/Teatral/Teatral-9.jpg',
       'images/Teatral/Teatral-10.jpg',
       'images/Teatral/Teatral-11.jpg',
       'images/Teatral/Teatral-12.jpg',
+      'images/Teatral/Teatral-13.jpg',
+      'images/Teatral/Teatral-14.jpg',
+      'images/Teatral/Teatral-15.jpg',
+      'images/Teatral/Teatral-16.jpg',
+      'images/Teatral/Teatral-17.jpg',
+      'images/Teatral/Teatral-18.jpg',
     ],
-    description: { es: 'Caracterización de vejez y arlequín para escuela de teatro.', en: 'Old-age and harlequin characterization for a theater school.' }
+    description: { es: 'Caracterizaciones para escuela de teatro: vejez, arlequín y personajes.', en: 'Characterizations for theater school: old age, harlequin and other characters.' }
   },
 ];
 
@@ -464,8 +472,21 @@ const teatralItems = [
 const fxItems = [
   {
     title: { es: 'Prótesis', en: 'Prosthetics' },
-    images: ['placeholder-fx-protesis-1.jpg'],
-    description: { es: 'Aplicación y diseño de prótesis de silicona.', en: 'Silicone prosthetic design and application.' }
+    images: [
+      'images/FX/protesis/protesis-1.jpg',
+      'images/FX/protesis/protesis-2.jpg',
+      'images/FX/protesis/protesis-3.jpg',
+      'images/FX/protesis/protesis-4.jpg',
+      'images/FX/protesis/protesis-5.jpg',
+      'images/FX/protesis/protesis-6.jpg',
+      'images/FX/protesis/protesis-7.jpg',
+      'images/FX/protesis/protesis-8.jpg',
+      'images/FX/protesis/protesis-9.jpg',
+      'images/FX/protesis/protesis-10.jpg',
+      'images/FX/protesis/protesis-11.jpg',
+      'images/FX/protesis/protesis-12.jpg',
+    ],
+    description: { es: 'Aplicación y diseño de prótesis: heridas, cicatrices y efectos de trauma.', en: 'Prosthetic design and application: wounds, scars and trauma effects.' }
   },
   {
     title: { es: 'Mastermind', en: 'Mastermind' },
@@ -475,6 +496,20 @@ const fxItems = [
       'images/FX/mastermind/mastermind-3.jpeg',
       'images/FX/mastermind/mastermind-4.jpeg',
       'images/FX/mastermind/mastermind-5.jpeg',
+      'images/FX/mastermind/mastermind-6.jpg',
+      'images/FX/mastermind/mastermind-7.jpg',
+      'images/FX/mastermind/mastermind-8.jpg',
+      'images/FX/mastermind/mastermind-9.jpg',
+      'images/FX/mastermind/mastermind-10.jpg',
+      'images/FX/mastermind/mastermind-11.jpg',
+      'images/FX/mastermind/mastermind-12.jpg',
+      'images/FX/mastermind/mastermind-13.jpg',
+      'images/FX/mastermind/mastermind-14.jpg',
+      'images/FX/mastermind/mastermind-15.jpg',
+      'images/FX/mastermind/mastermind-16.jpg',
+      'images/FX/mastermind/mastermind-17.jpg',
+      'images/FX/mastermind/mastermind-18.jpg',
+      'images/FX/mastermind/mastermind-19.jpg',
     ],
     description: { es: 'Efectos especiales — Mastermind.', en: 'Special effects — Mastermind.' }
   },
@@ -492,8 +527,20 @@ const fxItems = [
       'images/FX/los-opacados-rodaje/los-opacados-rodaje-9.jpg',
       'images/FX/los-opacados-rodaje/los-opacados-rodaje-10.jpg',
       'images/FX/los-opacados-rodaje/los-opacados-rodaje-11.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-12.jpg',
+      'images/FX/los-opacados-rodaje/los-opacados-rodaje-13.jpg',
     ],
     description: { es: 'Efectos especiales para Opacados.', en: 'Special effects for Opacados.' }
+  },
+  {
+    title: { es: 'Gritos en el Planetario', en: 'Gritos en el Planetario' },
+    images: [
+      'images/FX/gritos-en-el-planetario/gritos-en-el-planetario-1.jpg',
+      'images/FX/gritos-en-el-planetario/gritos-en-el-planetario-2.jpg',
+      'images/FX/gritos-en-el-planetario/gritos-en-el-planetario-3.jpg',
+      'images/FX/gritos-en-el-planetario/gritos-en-el-planetario-4.jpg',
+    ],
+    description: { es: 'Caracterizaciones para el evento Gritos en el Planetario.', en: 'Characterizations for the event Gritos en el Planetario.' }
   },
   {
     title: { es: 'Simulacro', en: 'Simulation' },
@@ -614,13 +661,23 @@ function openModal(images, title, description, startIndex = 0) {
     carouselContainer.appendChild(item);
   });
 
-  void carouselContainer.offsetWidth;
-  updateCarousel();
   modalTitle.textContent = title;
   modalDescription.textContent = description;
   modal.classList.add('active');
   document.body.classList.add('modal-open');
   document.body.style.overflow = 'hidden';
+
+  // Disable transition for the initial positioning, then re-enable, so the
+  // carousel jumps to the clicked image without an animation slide from #0.
+  // Run inside rAF so the modal is laid out and offsetWidth is the real width.
+  requestAnimationFrame(() => {
+    const prev = carouselContainer.style.transition;
+    carouselContainer.style.transition = 'none';
+    updateCarousel();
+    // Force reflow, then restore transitions for subsequent prev/next.
+    void carouselContainer.offsetWidth;
+    carouselContainer.style.transition = prev;
+  });
 }
 
 function closeModal() {
