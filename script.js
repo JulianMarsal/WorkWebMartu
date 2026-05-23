@@ -14,8 +14,8 @@ const translations = {
 
     'hero.subtitle':    'Maquillaje Artístico & Efectos Especiales',
     'home.aboutTitle':  'Sobre Mí',
-    'home.aboutP1':     'Licenciada y profesora en Artes Plásticas por la Universidad Nacional de La Plata, con formación en acrobacia aérea, maquillaje artístico y efectos especiales. Mi trabajo se mueve entre la creación artística, la docencia y la producción audiovisual.',
-    'home.aboutP2':     'Desde maquillaje social y teatral hasta efectos especiales con prótesis y simulacros, cada proyecto es una oportunidad para transformar y contar una historia a través de la piel.',
+    'home.aboutP1':     'Soy maquilladora profesional y efectista, titulada como Profesora en Artes Plásticas por la Universidad Nacional de La Plata, con formación en maquillaje social, artístico y efectos especiales. Mi trabajo se desarrolla entre la creación artística, la docencia y la producción audiovisual, explorando el maquillaje como una herramienta de transformación, expresión y narrativa.',
+    'home.aboutP2':     'Desde maquillaje beauty y social hasta caracterizaciones teatrales, bodypainting, prótesis y efectos especiales forenses, integro conocimientos de color, morfología y composición visual para crear propuestas únicas. Cada piel se convierte en un espacio de creación donde lo estético, lo emocional y lo escénico dialogan.',
     'home.portfolio':   'Portfolio',
     'home.featuredEyebrow': 'Trabajo destacado',
     'home.videos':      'Videos',
@@ -101,8 +101,8 @@ const translations = {
 
     'hero.subtitle':    'Artistic Makeup & Special Effects',
     'home.aboutTitle':  'About Me',
-    'home.aboutP1':     'Bachelor and licensed teacher of Visual Arts from the National University of La Plata, with training in aerial acrobatics, artistic makeup, and special effects. My work moves between artistic creation, teaching, and audiovisual production.',
-    'home.aboutP2':     'From social and theatrical makeup to special effects with prosthetics and simulations, every project is an opportunity to transform and tell a story through the skin.',
+    'home.aboutP1':     'I\'m a professional makeup and special-effects artist, with a teaching degree in Visual Arts from the National University of La Plata, and training in social, artistic, and special-effects makeup. My work spans artistic creation, teaching, and audiovisual production, exploring makeup as a tool for transformation, expression, and storytelling.',
+    'home.aboutP2':     'From beauty and social makeup to theatrical characterizations, body painting, prosthetics, and forensic special effects, I bring knowledge of color, morphology, and visual composition to create unique proposals. Each skin becomes a space of creation where the aesthetic, the emotional, and the scenic come into dialogue.',
     'home.portfolio':   'Portfolio',
     'home.featuredEyebrow': 'Featured work',
     'home.videos':      'Videos',
