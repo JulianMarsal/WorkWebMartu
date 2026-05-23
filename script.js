@@ -12,7 +12,7 @@ const translations = {
     'nav.fx':       'FX',
     'nav.contacto': 'Contacto',
 
-    'hero.subtitle':    'Maquillaje Artístico & Efectos Especiales',
+    'hero.subtitle':    'Maquilladora Profesional & Efectista',
     'home.aboutTitle':  'Sobre Mí',
     'home.aboutP1':     'Soy maquilladora profesional y efectista, titulada como Profesora en Artes Plásticas por la Universidad Nacional de La Plata, con formación en maquillaje social, artístico y efectos especiales. Mi trabajo se desarrolla entre la creación artística, la docencia y la producción audiovisual, explorando el maquillaje como una herramienta de transformación, expresión y narrativa.',
     'home.aboutP2':     'Desde maquillaje beauty y social hasta caracterizaciones teatrales, bodypainting, prótesis y efectos especiales forenses, integro conocimientos de color, morfología y composición visual para crear propuestas únicas. Cada piel se convierte en un espacio de creación donde lo estético, lo emocional y lo escénico dialogan.',
@@ -109,7 +109,7 @@ const translations = {
     'nav.fx':       'FX',
     'nav.contacto': 'Contact',
 
-    'hero.subtitle':    'Artistic Makeup & Special Effects',
+    'hero.subtitle':    'Professional Makeup & SFX Artist',
     'home.aboutTitle':  'About Me',
     'home.aboutP1':     'I\'m a professional makeup and special-effects artist, with a teaching degree in Visual Arts from the National University of La Plata, and training in social, artistic, and special-effects makeup. My work spans artistic creation, teaching, and audiovisual production, exploring makeup as a tool for transformation, expression, and storytelling.',
     'home.aboutP2':     'From beauty and social makeup to theatrical characterizations, body painting, prosthetics, and forensic special effects, I bring knowledge of color, morphology, and visual composition to create unique proposals. Each skin becomes a space of creation where the aesthetic, the emotional, and the scenic come into dialogue.',

@@ -36,7 +36,7 @@
 - **Email:** martu.parola@gmail.com
 - **Ubicación:** Oviedo, Asturias, España
 - **LinkedIn:** linkedin.com/in/martina-parola-8889022a8
-- **Cache version actual:** `?v=20`
+- **Cache version actual:** `?v=21`
 
 ## 🧭 Navegación (orden y data-nav)
 
