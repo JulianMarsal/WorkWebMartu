@@ -1504,14 +1504,14 @@ footer {
 }
 
 .footer-cross-link {
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.4);
   text-decoration: underline;
   text-underline-offset: 2px;
   transition: color 0.2s ease;
 }
 
 .footer-cross-link:hover {
-  color: var(--text-color);
+  color: var(--text-muted);
 }
 
 

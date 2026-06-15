@@ -35,9 +35,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- En construcción: descomentar cuando /maquillaje-social/ esté lista para indexar.
   <url>
     <loc>https://martinaparola.art/maquillaje-social/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+  -->
 </urlset>
