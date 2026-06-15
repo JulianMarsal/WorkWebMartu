@@ -1498,6 +1498,22 @@ footer {
   font-size: 0.85rem;
 }
 
+.footer-sep {
+  opacity: 0.5;
+  margin: 0 0.25rem;
+}
+
+.footer-cross-link {
+  color: var(--text-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.footer-cross-link:hover {
+  color: var(--text-color);
+}
+
 
 /* ═══════════════════════════════════════
    RESPONSIVE

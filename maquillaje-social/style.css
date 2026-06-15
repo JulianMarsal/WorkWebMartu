@@ -1,0 +1,48 @@
+/* ============================================================
+   Maquillaje Social & de Salón — estilos
+   Esqueleto base. El diseño lo completa otra sesión/programador.
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #0a0a0a;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+section {
+  padding: 4rem 1.5rem;
+}
+
+footer {
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-sep {
+  opacity: 0.5;
+  margin: 0 0.25rem;
+}
+
+.footer-cross-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.footer-cross-link:hover {
+  color: #ffffff;
+}
