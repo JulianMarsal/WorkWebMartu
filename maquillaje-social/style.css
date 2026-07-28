@@ -115,8 +115,8 @@ em{font-style:italic;color:var(--arcilla)}
   transition:color .2s ease;
 }
 .nav-links a:hover{color:var(--arcilla)}
-.btn-nav{padding:10px 22px;font-size:11px;color:var(--lino)}
-.btn-nav:hover{color:var(--lino)}
+.nav-links a.btn-nav{padding:10px 22px;font-size:11px;color:#fff}
+.nav-links a.btn-nav:hover{color:#fff}
 
 .nav-toggle{
   display:none;

@@ -427,7 +427,7 @@ const socialItems = [
     title: { es: 'Invitada 2025', en: 'Guest 2025' },
     images: [
       'images/Social/Invitada-Dia-2025.jpg',
-      'images/Social/Invitada-Noche-2025.png',
+      'images/Social/Invitada-Noche-2025.jpg',
       'images/Social/Invitada-NoMakeup-Makeup-2025.jpg',
     ],
     description: { es: 'Maquillaje social para invitada: looks de día, de noche y transformación no makeup-makeup, 2025.', en: 'Social makeup for a guest: day look, night look, and a no makeup-makeup transformation, 2025.' }
