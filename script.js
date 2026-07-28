@@ -423,6 +423,23 @@ const socialItems = [
     ],
     description: { es: 'Maquillaje y caracterización para Mastermind — personaje Mariposa.', en: 'Makeup and characterization for Mastermind — Butterfly character.' }
   },
+  {
+    title: { es: 'Invitada 2025', en: 'Guest 2025' },
+    images: [
+      'images/Social/Invitada-Dia-2025.jpg',
+      'images/Social/Invitada-Noche-2025.png',
+      'images/Social/Invitada-NoMakeup-Makeup-2025.jpg',
+    ],
+    description: { es: 'Maquillaje social para invitada: looks de día, de noche y transformación no makeup-makeup, 2025.', en: 'Social makeup for a guest: day look, night look, and a no makeup-makeup transformation, 2025.' }
+  },
+  {
+    title: { es: 'Editorial', en: 'Editorial' },
+    images: [
+      'images/Social/Editorial-2020.jpg',
+      'images/Social/Editorial-2021.jpg',
+    ],
+    description: { es: 'Producciones editoriales, 2020 y 2021.', en: 'Editorial productions, 2020 and 2021.' }
+  },
 ];
 
 // ── TEATRAL (turquesa pastel / tierra) ──
